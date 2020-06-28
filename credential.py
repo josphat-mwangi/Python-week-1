@@ -13,3 +13,10 @@ class Card:
         self.username = username
         self.accounts = accounts
         self.email = email
+
+    def save_card(self):
+        '''
+        method that save credebtials object to card list
+
+        '''
+        Card.card_list.append(self)

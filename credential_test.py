@@ -18,6 +18,14 @@ class TestCard(unittest.TestCase):
         self.assertEqual(self.new_card.accounts, "KCB")
         self.assertEqual(self.new_card.email, "tomjino@gmail.com")
 
+    def test_save_card(self):
+        '''
+        Saves credentials to card list 
+        '''
+
+        self.new_card.save_card()
+        self.assertEqual(len(Card.card_list), 1)
+
 
 if __name__ == '__main__':
     unittest.main()
