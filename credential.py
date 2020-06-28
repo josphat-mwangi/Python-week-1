@@ -3,6 +3,7 @@ class Card:
     class for creating new intance
 
     '''
+    card_list = []
 
     def __init__(self, username, accounts, email):
         '''
