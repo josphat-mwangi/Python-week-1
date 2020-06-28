@@ -20,3 +20,19 @@ class Card:
 
         '''
         Card.card_list.append(self)
+
+    def delete_card(self):
+        '''
+        method that delete credentials from card list
+
+        '''
+
+        Card.card_list.remove(self)
+
+    @classmethod
+    def display_cards(cls):
+        '''
+        method that returns card list
+
+        '''
+        return cls.card_list
