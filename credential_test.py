@@ -13,6 +13,13 @@ class TestCard(unittest.TestCase):
         '''
         self.new_card = Card("Tom Jino", "KCB", "tomjino@gmail.com")
 
+    def tearDown(self):
+        '''
+        method that does clean up after each test case has run
+
+        '''
+        Card.card_list = []
+
     def test_init(self):
         self.assertEqual(self.new_card.username, "Tom Jino")
         self.assertEqual(self.new_card.accounts, "KCB")
