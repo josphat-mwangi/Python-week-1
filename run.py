@@ -55,3 +55,25 @@ def displays_cards():
 
     '''
     return Card.display_cards()
+
+
+def main():
+    print("Hello there welcome to Password locker.")
+    print("")
+    while True:
+        print("Use these short codes : ca  - create new Account")
+        short_code = input().lower()
+        if short_code == 'ca':
+            print("first name ..")
+            fname = input()
+
+            print("last name ..")
+            lname = input()
+
+            print("Password ...")
+            password = input()
+
+            save_user(create_user(fname, lname, password))
+            print('\n')
+            print(f"New User {fname} {lname} created")
+            print('\n')
