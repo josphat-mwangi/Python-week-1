@@ -77,3 +77,39 @@ def main():
             print('\n')
             print(f"New User {fname} {lname} created")
             print('\n')
+    while True:
+        print("Use these short codes : CC - create new card DC - dispaly card  EX - exit")
+        short_code = input().lower()
+        if short_code == 'CC':
+            print("New Card")
+
+            print("Username ...")
+            username = input()
+
+            print("accounts")
+            accounts = input()
+
+            print("Email address ...")
+            email = input()
+
+            save_cards(create_card(username, password, email))
+
+            print('/n')
+            print(f"New Card {username} {accounts} {email} created")
+            print('/n')
+        elif short_code == 'dc':
+            if displays_cards():
+                print("Here is list of all cards")
+                print('/n')
+
+                for card in displays_cards():
+                    print(f"{card.username} {card.email} {card.account}")
+                    print('/n')
+            else:
+                print('/n')
+                print("You dont seem to have any cards save ")
+        elif short_code == "ex":
+            print("Bye .......")
+            break
+        else:
+            print("I really didn't get that. Please use the short codes")
